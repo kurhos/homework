@@ -83,7 +83,7 @@
                     success: function (response) {
                         if (response["result"] == "success") {
 
-                            let h = response['homework'];
+                            let h = response['orders'];
                             for (let i = 0; i < h.length; i++){
                                 let b = h[i];
 
@@ -102,14 +102,15 @@
 
             function makeOrderRow(name, count, address, phone) {
                 let tempHtml = `<tr>\
-                                <td>${name}</td>
-                                <td>${count}</td>
-                                <td>${address}</td>
-                                <td>${phone}</td>
-                              </tr>`;
+                                    <td>${name}</td>
+                                    <td>${count}</td>
+                                    <td>${address}</td>
+                                    <td>${phone}</td>
+                                </tr>`;
 
                 $('#orders-box').append(tempHtml);
             }
+
         </script>
 
         <style type="text/css">
@@ -200,6 +201,7 @@
                     </thead>
                     <tbody id="orders-box">
                     <tr>
+                        <th scope="row">1</th>
                         <td>박르탄</td>
                         <td>3</td>
                         <td>스파르타국 코딩시 프론트구</td>
